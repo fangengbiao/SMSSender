@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.telephony.gsm.SmsManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -38,6 +39,8 @@ public class MainActivity extends Activity {
 		PendingIntent pi = PendingIntent.
 		getBroadcast(this,0,new Intent(),0);   
 		sms.sendTextMessage(number,null,msg,pi,null);   
+		
+		Log.i("sdfa", "123");
 	}
 
 	@Override
